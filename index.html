@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Minas Net | Internet Fibra em Campo Belo - MG</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .bg-primary { background-color: #0b3c5d; }
+        .text-primary { color: #0b3c5d; }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0b3c5d 0%, #1d5a85 100%);
+        }
+        .plan-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .plan-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(11, 60, 93, 0.25);
+        }
+        
+        .mascote-img {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: 400px;
+            margin: 0 auto;
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-10px);}
+            60% {transform: translateY(-5px);}
+        }
+
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900">
+
+    <!-- Header / Hero Section -->
+    <header class="gradient-bg text-white relative overflow-hidden pt-12 pb-24 px-6">
+        <div class="max-w-6xl mx-auto relative z-10 text-center">
+            <!-- Navegação -->
+            <nav class="flex justify-between items-center mb-16">
+                <div class="flex items-center gap-2">
+                    <img src="logo-rede-minas-net.png" alt="Mascote Pequeno" class="h-10 w-auto" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3662/3662817.png'">
+                    <span class="font-extrabold text-xl tracking-tighter uppercase">Rede Minas Net</span>
+                </div>
+                <div class="hidden md:flex gap-8 font-medium text-sm text-blue-100">
+                    <a href="#quem-somos" class="hover:text-white transition-colors">Sobre</a>
+                    <a href="#planos" class="hover:text-white transition-colors">Planos</a>
+                    <a href="#vantagens" class="hover:text-white transition-colors">Vantagens</a>
+                    <a href="#recomendacoes" class="hover:text-white transition-colors">Depoimentos</a>
+                </div>
+                <a href="https://wa.me/5535998252502" class="bg-blue-500 hover:bg-blue-400 text-white px-5 py-2 rounded-lg font-bold text-sm transition-all">WhatsApp</a>
+            </nav>
+
+            <div class="mb-10 flex justify-center">
+                <img src="logo-rede-minas-net.png" alt="Mascote Rede Minas Net" class="mascote-img mb-6 block" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3662/3662817.png'">
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                A Ultra Velocidade que <br> <span class="text-blue-400">Campo Belo</span> esperava.
+            </h1>
+            <p class="text-lg md:text-xl text-blue-100 mb-10 max-w-2xl mx-auto opacity-90">
+                Internet 100% fibra óptica com tecnologia de ponta para você navegar, jogar e trabalhar sem interrupções.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#planos" class="bg-white text-primary px-10 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all shadow-xl flex items-center justify-center gap-2">
+                    Escolher meu Plano <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="https://wa.me/5535998252502" target="_blank" class="bg-green-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-green-600 transition-all shadow-xl flex items-center justify-center gap-2">
+                    <i data-lucide="message-circle"></i> Assinar via WhatsApp
+                </a>
+            </div>
+
+            <div class="mt-16 scroll-indicator opacity-50">
+                <i data-lucide="chevron-down" class="mx-auto w-8 h-8"></i>
+            </div>
+        </div>
+        
+        <!-- Design Elements -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-white opacity-5 rounded-full -mr-64 -mt-64"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-400 opacity-10 rounded-full -ml-32 -mb-32"></div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="max-w-5xl mx-auto -mt-12 relative z-20 px-6">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center border border-slate-100">
+            <div>
+                <p class="text-3xl font-extrabold text-primary italic">100%</p>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Fibra Óptica</p>
+            </div>
+            <div>
+                <p class="text-3xl font-extrabold text-primary italic">24/7</p>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Suporte Técnico Local</p>
+            </div>
+            <div>
+                <p class="text-3xl font-extrabold text-primary italic">PING BAIXO</p>
+                <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Ideal para Gamers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="quem-somos" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-blue-100 rounded-full -z-10"></div>
+                <img src="instalação-fibra.png" alt="Instalação de Fibra" class="rounded-3xl shadow-2xl w-full h-[450px] object-cover">
+                <div class="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-2xl shadow-xl hidden md:block border-4 border-white">
+                    <p class="text-sm font-bold opacity-80 uppercase tracking-widest">Nossa Missão</p>
+                    <p class="text-xl font-bold mt-1 leading-tight">Conectando famílias<br>e empresas locais.</p>
+                </div>
+            </div>
+            <div>
+                <span class="text-blue-600 font-extrabold text-sm uppercase tracking-[0.2em] mb-4 block">Sobre a Rede Minas Net</span>
+                <h2 class="text-4xl font-extrabold text-slate-900 mb-6 leading-tight">Conexão local feita por quem entende de <span class="text-primary italic">Campo Belo</span>.</h2>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Não somos apenas uma operadora de internet. Somos uma empresa comprometida com o desenvolvimento da nossa região. Investimos em infraestrutura de última geração para garantir que você tenha a mesma qualidade de conexão das grandes metrópoles.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-green-100 p-1 rounded-full"><i data-lucide="check" class="text-green-600 w-4 h-4"></i></div>
+                        <div>
+                            <p class="font-bold text-slate-900">Estabilidade Garantida</p>
+                            <p class="text-slate-500 text-sm">Rede redundante para você nunca ficar offline.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-green-100 p-1 rounded-full"><i data-lucide="check" class="text-green-600 w-4 h-4"></i></div>
+                        <div>
+                            <p class="font-bold text-slate-900">Suporte Humanizado</p>
+                            <p class="text-slate-500 text-sm">Técnicos locais prontos para resolver rapidamente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="planos" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <span class="text-blue-600 font-extrabold text-sm uppercase tracking-[0.2em] mb-4 block">Nossas Ofertas</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">Planos que cabem no seu bolso</h2>
+            <p class="text-slate-600 text-lg max-w-2xl mx-auto">Velocidade real e transparência total nos contratos.</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Plan 350MB -->
+            <div class="plan-card bg-white rounded-[2rem] p-8 border border-slate-200 flex flex-col justify-between shadow-sm">
+                <div>
+                    <div class="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="home" class="text-slate-400"></i>
+                    </div>
+                    <span class="text-slate-400 font-bold text-xs uppercase tracking-widest">Residencial</span>
+                    <h3 class="text-5xl font-black text-slate-900 mt-2 tracking-tighter">350<span class="text-xl font-bold">MB</span></h3>
+                    <div class="h-1 w-12 bg-slate-200 my-6"></div>
+                    <ul class="space-y-4 text-sm font-medium text-slate-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Streaming HD</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Wi-Fi incluso</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Instalação Grátis*</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5535998252502" class="mt-10 block bg-slate-50 text-primary py-4 rounded-xl font-bold text-center hover:bg-primary hover:text-white transition-all">Começar Agora</a>
+            </div>
+
+            <!-- Plan 450MB -->
+            <div class="plan-card bg-white rounded-[2rem] p-8 border border-slate-200 flex flex-col justify-between shadow-sm">
+                <div>
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="briefcase" class="text-blue-400"></i>
+                    </div>
+                    <span class="text-blue-400 font-bold text-xs uppercase tracking-widest">Home Office</span>
+                    <h3 class="text-5xl font-black text-slate-900 mt-2 tracking-tighter">450<span class="text-xl font-bold">MB</span></h3>
+                    <div class="h-1 w-12 bg-blue-200 my-6"></div>
+                    <ul class="space-y-4 text-sm font-medium text-slate-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Reuniões estáveis</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Upload prioritário</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Suporte Premium</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5535998252502" class="mt-10 block bg-slate-50 text-primary py-4 rounded-xl font-bold text-center hover:bg-primary hover:text-white transition-all">Assinar este</a>
+            </div>
+
+            <!-- Plan 620MB (Featured) -->
+            <div class="plan-card bg-primary rounded-[2rem] p-8 shadow-2xl relative flex flex-col justify-between transform lg:scale-110 z-10 text-white overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 -mr-16 -mt-16 rounded-full"></div>
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-6 py-1.5 rounded-full font-extrabold text-[10px] uppercase tracking-widest">Recomendado</div>
+                <div>
+                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="zap" class="text-blue-300"></i>
+                    </div>
+                    <span class="text-blue-300 font-bold text-xs uppercase tracking-widest">Ultra Gamer</span>
+                    <h3 class="text-6xl font-black mt-2 tracking-tighter italic">620<span class="text-2xl font-normal opacity-70">MB</span></h3>
+                    <div class="h-1.5 w-16 bg-blue-400 my-8 rounded-full"></div>
+                    <ul class="space-y-4 text-sm font-medium">
+                        <li class="flex items-center gap-3"><i data-lucide="star" class="text-yellow-400 fill-yellow-400 w-4 h-4"></i> 4K em todas as TVs</li>
+                        <li class="flex items-center gap-3"><i data-lucide="gamepad-2" class="text-blue-200 w-4 h-4"></i> Latência Mínima</li>
+                        <li class="flex items-center gap-3"><i data-lucide="wifi" class="text-blue-200 w-4 h-4"></i> Roteador Dual Band</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5535998252502" class="mt-10 block bg-blue-500 text-white py-5 rounded-2xl font-extrabold text-center shadow-lg hover:bg-blue-400 transition-all">CONTRATAR AGORA</a>
+            </div>
+
+            <!-- Plan 900MB -->
+            <div class="plan-card bg-white rounded-[2rem] p-8 border border-slate-200 flex flex-col justify-between shadow-sm">
+                <div>
+                    <div class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="building" class="text-white w-6 h-6"></i>
+                    </div>
+                    <span class="text-slate-900 font-bold text-xs uppercase tracking-widest">Premium</span>
+                    <h3 class="text-5xl font-black text-slate-900 mt-2 tracking-tighter">900<span class="text-xl font-bold">MB</span></h3>
+                    <div class="h-1 w-12 bg-slate-900 my-6"></div>
+                    <ul class="space-y-4 text-sm font-medium text-slate-600">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> 20+ dispositivos</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> Download Instantâneo</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-500 w-4 h-4"></i> IP Fixo Opcional</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5535998252502" class="mt-10 block bg-slate-900 text-white py-4 rounded-xl font-bold text-center hover:opacity-90 transition-all">Assinar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section id="vantagens" class="py-24 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-extrabold text-sm uppercase tracking-[0.2em] mb-4 block">Diferenciais</span>
+                <h2 class="text-4xl font-extrabold text-slate-900 mb-4">Por que a Rede Minas Net?</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-all group">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="text-blue-600 w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-900">Segurança Total</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Filtros avançados e proteção para uma navegação tranquila para toda a família.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-all group">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="gauge" class="text-blue-600 w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-900">Entrega Real</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Entregamos 100% da velocidade contratada via cabo para máxima performance.</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-blue-200 transition-all group">
+                    <div class="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="headphones" class="text-blue-600 w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3 text-slate-900">Suporte Humano</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Pessoas reais que conhecem sua região e resolvem seu problema rapidamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Usa Recomenda -->
+    <section id="recomendacoes" class="py-24 px-6 bg-slate-100">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-extrabold text-sm uppercase tracking-[0.2em] mb-4 block">Feedback</span>
+                <h2 class="text-4xl font-extrabold text-slate-900 mb-4 italic">"Quem usa, recomenda!"</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Melhor internet que já tive em Campo Belo. Estável para jogar e o suporte atende na hora."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600 text-xs">JP</div>
+                        <p class="font-bold text-slate-900 text-sm">João Pedro S.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Uso para trabalhar home office e nunca caiu. A velocidade é exatamente a que contratei."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center font-bold text-pink-600 text-xs">MA</div>
+                        <p class="font-bold text-slate-900 text-sm">Maria Alice G.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                    <div class="flex gap-1 mb-4">
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                    </div>
+                    <p class="text-slate-600 italic mb-6">"Suporte nota dez. Tive uma dúvida no roteador e me ajudaram por vídeo na mesma hora."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center font-bold text-green-600 text-xs">RL</div>
+                        <p class="font-bold text-slate-900 text-sm">Ricardo Leme</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 px-6 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-center text-slate-900 mb-12 italic">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <details class="bg-slate-50 p-6 rounded-2xl border border-slate-200 group transition-all">
+                    <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer">
+                        Quanto tempo leva para instalar?
+                        <i data-lucide="plus" class="text-blue-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">Nossa meta é realizar a instalação em até 48 horas úteis após a aprovação do seu cadastro. Somos reconhecidos pela agilidade em Campo Belo!</p>
+                </details>
+                <details class="bg-slate-50 p-6 rounded-2xl border border-slate-200 group transition-all">
+                    <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer">
+                        A instalação é paga?
+                        <i data-lucide="plus" class="text-blue-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">Na maioria dos nossos planos, a instalação é gratuita mediante fidelidade de 12 meses. Consulte disponibilidade para seu endereço.</p>
+                </details>
+                <details class="bg-slate-50 p-6 rounded-2xl border border-slate-200 group transition-all">
+                    <summary class="flex items-center justify-between font-bold text-slate-900 cursor-pointer">
+                        O roteador está incluso?
+                        <i data-lucide="plus" class="text-blue-500 group-open:rotate-45 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">Sim! Fornecemos o roteador Wi-Fi de alta potência em regime de comodato em todos os nossos planos de fibra óptica.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white pt-24 pb-12 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16 text-center md:text-left">
+            <div class="col-span-1 md:col-span-2 flex flex-col items-center md:items-start">
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="logo-rede-minas-net.png" alt="Mascote Mini" class="h-16 w-auto brightness-110" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3662/3662817.png'">
+                    <span class="font-extrabold text-2xl tracking-tighter uppercase">REDE MINAS NET</span>
+                </div>
+                <p class="text-slate-400 max-w-sm mb-8">Conectando Campo Belo e região com a melhor tecnologia de fibra óptica do mercado.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/profile.php?id=100067022288810" target="_blank" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-blue-600 transition-all">
+                        <i data-lucide="facebook" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.instagram.com/redeminastelecom/" target="_blank" class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-pink-600 transition-all">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Links Rápidos</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li><a href="#quem-somos" class="hover:text-white transition-colors">Quem Somos</a></li>
+                    <li><a href="#planos" class="hover:text-white transition-colors">Planos Disponíveis</a></li>
+                    <li><a href="#recomendacoes" class="hover:text-white transition-colors">O que dizem os clientes</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contato</h4>
+                <ul class="space-y-4 text-slate-400 text-sm">
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i data-lucide="phone" class="w-4 h-4"></i> (35) 99825-2502</li>
+                    <li class="flex items-center justify-center md:justify-start gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Campo Belo - MG</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500 text-xs gap-4 text-center">
+            <p>© 2024 Rede Minas Net. Todos os direitos reservados.</p>
+            <p>Conectando você ao futuro.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button (Contratar Online) -->
+    <a href="https://wa.me/5535998252502" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 hover:bg-green-600 hover:scale-105 active:scale-95 transition-all z-50">
+        <div class="relative">
+            <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+            <span class="absolute -top-1 -right-1 w-3 h-3 bg-red-500 border-2 border-green-500 rounded-full animate-pulse"></span>
+        </div>
+        <span class="font-bold">Contratar Online</span>
+    </a>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
